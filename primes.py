@@ -2,14 +2,18 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 def primes(number_of_primes):
-    counter= 1
-    char = ""
-    frequencies = {}
-    for x in range(0,len(items)):
-        char = items[x]
-        if char in frequencies:
-            count= frequencies.get(char)+1
-            frequencies[char]= count
-        else:
-            frequencies[char]= 1
-    return frequencies
+    List = []
+    number = 2
+    while len(List)<number_of_primes:
+        count=2
+        flag = True
+        while flag:
+            if count == number:
+                List.append(number)
+                flag = False
+            if number % count != 0:
+                count= count+1
+            else:
+                number= number+1
+                count = 2
+    return List
